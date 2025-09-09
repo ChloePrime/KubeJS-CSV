@@ -16,6 +16,7 @@
   "mixins": [],
   "depends": {
     "fabricloader": ">=0",
-    "minecraft": ">=1.14.4"
+    "minecraft": ">=1.21",
+    "kubejs": ">=2101"
   }
 }
