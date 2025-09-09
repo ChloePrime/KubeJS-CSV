@@ -14,6 +14,23 @@ repositories {
     mavenCentral()
 
     maven {
+        // Ancient KubeJS (Shedaniel's maven)
+        url = "https://maven.architectury.dev"
+        content {
+            includeGroup "me.shedaniel"
+        }
+    }
+
+    maven {
+        // Ancient KubeJS (saps.dev Maven)
+        url = "https://maven.saps.dev/minecraft"
+        content {
+            includeGroup "dev.latvian.mods"
+        }
+    }
+
+    maven {
+        // Modern KubeJS
         url "https://maven.latvian.dev/releases"
         content {
             includeGroup "dev.latvian.mods"
