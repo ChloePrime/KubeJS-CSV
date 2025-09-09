@@ -6,6 +6,7 @@ plugins {
     id 'xyz.wagyourtail.jvmdowngrader' version '1.3.3'
 }
 
+mod_version = mod_version + "-kjs7"
 version = mod_version
 group = mod_group_id
 
