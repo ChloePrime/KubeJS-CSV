@@ -1,12 +1,15 @@
+## API
+see `docs/api.d.ts` for API declarations. 
+
 ## Example:
-Using `CsvIO.parse` will convert the following CSV document to
+Using `CsvIO.parse(string)` will convert the following CSV document to
 ```csv
 Name,ID,HasPhone
 Alice,1,true
 Bob,2,false,Redundant Data
 Chara,3
 ```
-to
+to (JavaScript objects)
 ```json5
 [
   {
