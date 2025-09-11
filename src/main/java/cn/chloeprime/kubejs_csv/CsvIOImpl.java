@@ -5,7 +5,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import com.machinezoo.noexception.Exceptions;
-import dev.latvian.mods.kubejs.util.JsonUtils;
+import dev.latvian.mods.kubejs.util.JsonIO;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.BufferedReader;
@@ -17,6 +17,7 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 public class CsvIOImpl {
     public static void checkFilePermission(Path path) {
@@ -136,9 +137,9 @@ public class CsvIOImpl {
             return;
         }
 
-        Map<?, ?>[] entries = content.asList().stream()
+        Map<?, ?>[] entries = StreamSupport.stream(content.spliterator(), false)
                 .filter(element -> element instanceof JsonObject)
-                .map(element -> (Map<?, ?>) JsonUtils.GSON.fromJson(element, ENTRY_TYPE.getType()))
+                .map(element -> (Map<?, ?>) JsonIO.GSON.fromJson(element, ENTRY_TYPE.getType()))
                 .toArray(Map<?, ?>[]::new);
         Object[] keys = Arrays.stream(entries)
                 .flatMap(map -> map.keySet().stream())
