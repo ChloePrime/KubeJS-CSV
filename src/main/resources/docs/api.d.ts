@@ -12,7 +12,7 @@ export class CsvIO {
      * 
      * @param path path to the CSV file.
      */
-    read(path: string|java.nio.Path): Array<any>
+    read(path: string|java.nio.file.Path): Array<any>
 
     /**
      * Serialize an array of JavaScript objects to a CSV document string.
@@ -29,7 +29,7 @@ export class CsvIO {
      * @param path path to the CSV file.
      * @param content the array of JavaScript objects.
      */
-    write(path: string|java.nio.Path, content: Array<any>): void
+    write(path: string|java.nio.file.Path, content: Array<any>): void
 
     /**
      * Deletes a CSV document from the file system.
@@ -37,5 +37,5 @@ export class CsvIO {
      * 
      * @param path path to the CSV file.
      */
-    delete(path: string|java.nio.Path): void
+    delete(path: string|java.nio.file.Path): void
 }
