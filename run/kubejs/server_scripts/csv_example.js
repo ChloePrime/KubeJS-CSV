@@ -1,4 +1,4 @@
-// Visit the wiki for more info - https://kubejs.com/
+// Visit the docs for more info - https://github.com/ChloePrime/KubeJS-CSV/tree/master/src/main/resources/docs/
 console.info('Hello, testing KubeJS CSV functionality!')
 
 console.info(CsvIO.read("kubejs/test.csv"))
