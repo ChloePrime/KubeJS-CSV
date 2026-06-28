@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "id": "${mod_id}",
   "version": "${mod_version}",
-
   "name": "${mod_name}",
   "description": "${mod_description}",
   "authors": ["${mod_authors}"],
-  "contact": {},
-
-  "license": "MIT",
+  "contact": {
+    "homepage": "https://github.com/ChloePrime/",
+    "sources": "https://github.com/ChloePrime/KubeJS-CSV/"
+  },
+  "license": "${mod_license}",
   "icon": "logo.png",
-
   "environment": "*",
   "entrypoints": {},
   "mixins": [],
   "depends": {
-    "fabricloader": ">=0",
-    "minecraft": ">=1.21",
-    "kubejs": ">=2101"
+    "fabricloader": "*",
+    "minecraft": "~26.1.2",
+    "java": ">=25"
   }
 }

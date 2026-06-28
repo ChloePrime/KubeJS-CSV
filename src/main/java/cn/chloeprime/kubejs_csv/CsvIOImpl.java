@@ -1,10 +1,10 @@
 package cn.chloeprime.kubejs_csv;
 
 import cn.chloeprime.kubejs_csv.api.CsvIO;
+import cn.chloeprime.kubejs_csv.common.mc26_1.machinezoo.MachineZooDebris;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
-import com.machinezoo.noexception.Exceptions;
 import dev.latvian.mods.kubejs.util.JsonUtils;
 import org.jetbrains.annotations.Nullable;
 
@@ -38,7 +38,7 @@ public class CsvIOImpl {
             return Collections.emptyList();
         }
         try (var reader = content instanceof BufferedReader buffered ? buffered : new BufferedReader(content)) {
-            return parse0(Exceptions.sneak().supplier(reader::readLine));
+            return parse0(MachineZooDebris.supplier(reader::readLine));
         }
     }
 
@@ -127,7 +127,7 @@ public class CsvIOImpl {
         }
 
         try (var writer = Files.newBufferedWriter(path)) {
-            write(Exceptions.sneak().consumer(writer::write), content);
+            write(MachineZooDebris.consumer(writer::write), content);
         }
     }
 
