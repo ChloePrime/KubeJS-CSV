@@ -1,0 +1,5 @@
+Name,Phone,Bool,Blue
+Alice,10000.0,true,
+Bob,10001.0,false,
+Charlie,10086.0,,
+Bad Ass,,,{A=1.0, C=false}
